@@ -52,17 +52,17 @@
                     <!-- shape  -->
                     <div class="bg-[#CCCCFF] h-[174px] w-[243px]"></div>
                     <h2 class="text-center text-dark2 font-bold text-[25px] mt-6">Rectangle</h2>
-                    <p class="mt-2 text-center">Area (A) = W X I</p>
+                    <p class="mt-2 text-center">Area (A) = W X H</p>
                     <div class="mt-5 flx flex-row items-center">
-                        <input type="number" name="" id="" placeholder="W"
-                            class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
-                        <input type="number" name="" id="" placeholder="I"
-                            class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
+                        <input type="number" name="" id="rectangle-width" placeholder="W"
+                            class="text-center p-2 w-16 outline-none rounded-lg border-2"> <span class="">cm</span>
+                        <input type="number" name="" id="rectangle-height" placeholder="H"
+                            class="text-center p-2 w-16 outline-none rounded-lg border-2"> <span class="">cm</span>
                     </div>
                     <!-- result -->
-                    <p class="text-center font-semibold mt-5">Area: <span id=""></span></p>
+                    <p class="text-center font-semibold mt-5">Area: <span id="rectangle-result"></span></p>
                     <div class="mt-5">
-                        <button class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
+                        <button onclick="rectangleCalculation()" id="rectangle-calculator" class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
                     </div>
                 </div>
                 <!-- card 3 -->
@@ -74,14 +74,14 @@
                     <h2 class="text-center text-dark2 font-bold text-[25px] mt-6">Parallelogram</h2>
                     <p class="mt-2 text-center">Area (A) = b X h</p>
                     <div class="mt-5 flx flex-row items-center">
-                        <input type="number" name="" id="" placeholder="b"
+                        <input type="number" name="" id="parallel-base" placeholder="b"
                             class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
-                        <input type="number" name="" id="" placeholder="h"
+                        <input type="number" name="" id="parallel-height" placeholder="h"
                             class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
                     </div><!-- result -->
-                    <p class="text-center font-semibold mt-5">Area: <span id=""></span></p>
+                    <p class="text-center font-semibold mt-5">Area: <span id="parallel-result"></span></p>
                     <div class="mt-5">
-                        <button class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
+                        <button onclick="parallelCalculation()" id="parallel-calculation" class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
                     </div>
                 </div>
                 <!-- card 4 -->
@@ -93,14 +93,14 @@
                     <h2 class="text-center text-dark2 font-bold text-[25px] mt-6">Rhombus</h2>
                     <p class="mt-2 text-center">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
                     <div class="mt-5 flx flex-row items-center">
-                        <input type="number" name="" id="" placeholder="d1"
+                        <input type="number" name="" id="rhombus-d1" placeholder="d1"
                             class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
-                        <input type="number" name="" id="" placeholder="d2"
+                        <input type="number" name="" id="rhombus-d2" placeholder="d2"
                             class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
                     </div><!-- result -->
-                    <p class="text-center font-semibold mt-5">Area: <span id=""></span></p>
+                    <p class="text-center font-semibold mt-5">Area: <span id="rhombus-result"></span></p>
                     <div class="mt-5">
-                        <button class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
+                        <button onclick="rhombusCalculation()" class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
                     </div>
                 </div>
                 <!-- card 5 -->
@@ -113,14 +113,14 @@
                     <h2 class="text-center text-dark2 font-bold text-[25px] mt-6">Pentagon</h2>
                     <p class="mt-2 text-center">Area (A) = 0.5 X p X b</sub></p>
                     <div class="mt-5 flx flex-row items-center">
-                        <input type="number" name="" id="" placeholder="p"
+                        <input type="number" name="" id="pentagon-parameter" placeholder="p"
                             class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
-                        <input type="number" name="" id="" placeholder="b"
+                        <input type="number" name="" id="pentagon-base" placeholder="b"
                             class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
                     </div><!-- result -->
-                    <p class="text-center font-semibold mt-5">Area: <span id=""></span></p>
+                    <p class="text-center font-semibold mt-5">Area: <span id="pentagon-result"></span></p>
                     <div class="mt-5">
-                        <button class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
+                        <button onclick="pentagonCalculation()" class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
                     </div>
                 </div>
                 <!-- card 6 -->
@@ -132,14 +132,14 @@
                     <h2 class="text-center text-dark2 font-bold text-[25px] mt-6">Ellipse</h2>
                     <p class="mt-2 text-center">Area (A) = &pi;ab</p>
                     <div class="mt-5 flx flex-row items-center">
-                        <input type="number" name="" id="" placeholder="a"
+                        <input type="number" name="" id="ellipse-a" placeholder="a"
                             class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
-                        <input type="number" name="" id="" placeholder="b"
+                        <input type="number" name="" id="ellipse-b" placeholder="b"
                             class="text-center p-2 w-16 outline-none rounded-lg"> <span class="">cm</span>
                     </div><!-- result -->
-                    <p class="text-center font-semibold mt-5">Area: <span id=""></span></p>
+                    <p class="text-center font-semibold mt-5">Area: <span id="ellipse-result"></span></p>
                     <div class="mt-5">
-                        <button class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
+                        <button onclick="ellipseCalculation()" class="text-white text-[25px] py-2 px-9 rounded-lg bg-blue">Calculate</button>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,10 @@
             <!-- right -->
             <div class="w-3/12 py-4">
                 <h2 class="underline text-[25px] font-bold text-center text-dark1/80">Area Calculation</h2>
-                <div class="py-3 flex flex-row  items-center justify-between">
+                <!-- calculation history -->
+                <div id="calculation-history" class=""></div>
+
+                <!-- <div class="py-3 flex flex-row  items-center justify-between">
                     <p class="text-[20px] font-bold text-dark2">1.Triangle</p>
                     <input type="text" placeholder="12 cm2" class="w-20 outline-none p-2">
                     <button class="text-white text-base  p-2 rounded-lg bg-blue">Convert to m<sup>2</sup></button>
@@ -156,7 +159,7 @@
                     <p class="text-[20px] font-bold text-dark2">2.Ellipse</p>
                     <input type="text" placeholder="125.6 cm2" class="w-24 outline-none p-2">
                     <button class="text-white text-base  p-2 rounded-lg bg-blue">Convert to m<sup>2</sup></button>
-                </div>
+                </div> -->
             </div>
         </main>
     </div>
